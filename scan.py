@@ -16,3 +16,5 @@ token = result1['token']
 data2 = 'domain=%s&show_test_results=false&recheck=false&choosen_ip=%s&verbosity=1&token=%s' % (target,selectedIP, token)
 req2 = requests.post('https://www.htbridge.com/ssl/api/v1/check/0000000001.html', headers=headers , data=data2)
 result2 = req2.json()
+result3 = json.dumps(result2,indent=4,separators=(',',':'))
+print result3
