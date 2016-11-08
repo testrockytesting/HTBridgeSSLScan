@@ -1,0 +1,56 @@
+Enter the domain name that you want to scan for SSL configuration : mozilla.com
+
+
+***********************************************************************
+
+			The analysis of SSL is as follows :
+
+***********************************************************************
+
+HTTP Header analysis : 
+HSTS Duration :  31536000
+Server Info :  [u'The header was not sent by the server. [1]']
+X-Frame-Options :  [u'The header was not sent by the server. [3]']
+X-Content-Type-Options :  [u'The header was not sent by the server. [3]']
+X-XSS-Protection :  [u'The header was not sent by the server, enforcing heuristic protection without blocking page. This can introduce vulnerabilities. [3]']
+HPKP :  [u'The header was not sent by the server. [3]']
+
+Testing against known vulnerabilities in OpenSSL : 
+
+cve_2016_2107 :  The server may be vulnerable to OpenSSL padding-oracle flaw (CVE-2016-2107), make sure that your OpenSSL version is up to date.
+cve_2014_0224 :  The server is not vulnerable to CVE-2014-0224 (OpenSSL CCS flaw).
+drown :  The server is not vulnerable to the DROWN attack.
+poodle_tls :  The server is not vulnerable to POODLE over TLS.
+heartbleed :  The server version of OpenSSL is not vulnerable to Heartbleed attack.
+supports_insecure_reneg :  The server does not support client-initiated insecure renegotiation.
+poodle_ssl :  
+
+supported_protocols : 
+TLSv1.0
+TLSv1.1
+TLSv1.2
+
+supported_elliptic_curves : 
+P-256 (prime256v1)
+P-384 (secp384r1)
+P-521 (secp521r1)
+
+supported_cipher_suites : 
+TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+TLS_RSA_WITH_AES_128_GCM_SHA256
+TLS_RSA_WITH_AES_256_GCM_SHA384
+TLS_RSA_WITH_AES_128_CBC_SHA256
+TLS_RSA_WITH_AES_256_CBC_SHA256
+TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA
+TLS_RSA_WITH_3DES_EDE_CBC_SHA
+
+Process finished with exit code 0
